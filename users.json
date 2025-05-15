@@ -1,0 +1,60 @@
+[
+  {
+    "id": "000000001",
+    "username": "hhhhh",
+    "password": "$2b$12$bh6K9iBf41SH4YZPUP0av.YL0HsT1aCldlbHnQTDKvsXO.H9dYkb6",
+    "conflicts": [],
+    "team": null
+  },
+  {
+    "id": "000000002",
+    "username": "hhhh",
+    "password": "$2b$12$Vrm4qBBjbM/n5UZlxFE1hOj5MEbSrGcefi4Wx2NGKFWSYggJk9NZq",
+    "conflicts": [],
+    "team": null
+  },
+  {
+    "id": "000000003",
+    "username": "dhn",
+    "password": "$2b$12$bS3IZmhK1uOKFV.R7mL51.aUkNOOHGUuI4x8IOtmY31BPTt8WngH2",
+    "conflicts": [],
+    "nickname": "ngucocansang",
+    "full_name": "Dinh Hong Ngoc",
+    "phone": "09643845688888",
+    "contact": "ig ngucocansang"
+  },
+  {
+    "id": "000000004",
+    "username": "1",
+    "password": "$2b$12$WVl3K2XoqFtkuDzqphCzkOBjJnDGDOESrr4gTs5qIzXxLUkY7tRNq",
+    "conflicts": [],
+    "nickname": "hihi",
+    "full_name": "hihiii"
+  },
+  {
+    "id": "000000005",
+    "username": "",
+    "password": "$2b$12$nCXprCxeq1dozaHoZyF9GePRKeKw1MMevsb7N1Bw8fn6bsFAW7aHe",
+    "conflicts": [],
+    "nickname": "",
+    "full_name": ""
+  },
+  {
+    "id": "000000006",
+    "username": "ipopop",
+    "password": "$2b$12$nX8wvuPwaixt8MkFY5.G3.mhjBJ2UXDe8B2FufHNtHAxcpMat2K4K",
+    "conflicts": [],
+    "nickname": "koko",
+    "full_name": "kokoo",
+    "institution": "kkk"
+  },
+  {
+    "id": "000000007",
+    "username": "i",
+    "password": "$2b$12$etpnHmqlrmq9PrKyoY5jZerk87pPTy62CxKLZQiVz2wYFfv/6QNkG",
+    "conflicts": [],
+    "nickname": "1",
+    "full_name": "1111111",
+    "institution": "ooooo"
+  }
+]

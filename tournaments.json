@@ -1,0 +1,90 @@
+[
+  {
+    "id": "tmt-4595df",
+    "name": "KAPAIO",
+    "roles": {
+      "debater": [],
+      "adjudicator": [],
+      "organizer": [],
+      "observer": [],
+      "cap_team": [],
+      "equity_team": []
+    },
+    "post_conflicts": []
+  },
+  {
+    "id": "714fbed5",
+    "name": "KAPAIO",
+    "head_organizer_id": "000000004",
+    "participants": [
+      "kookoo"
+    ],
+    "conflicts": []
+  },
+  {
+    "id": "8d943f3b",
+    "name": "",
+    "head_organizer_id": "000000004",
+    "participants": [],
+    "conflicts": []
+  },
+  {
+    "id": "2cdaedaa",
+    "name": "dod",
+    "organizer": {
+      "id": "000000004",
+      "username": "1",
+      "nickname": "hihi",
+      "full_name": "hihiii"
+    },
+    "participants": [
+      {
+        "id": "000000004",
+        "username": "1",
+        "nickname": "hihi",
+        "full_name": "hihiii",
+        "role": "debater",
+        "private_level": "private",
+        "team_id": "40b9e5e7"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "40b9e5e7",
+        "team_name": "nicotin",
+        "members": [
+          {
+            "id": "000000004",
+            "username": "1",
+            "nickname": "hihi",
+            "full_name": "hihiii"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "802b5d2c",
+    "name": "",
+    "organizer": {
+      "id": "000000004",
+      "username": "1",
+      "nickname": "hihi",
+      "full_name": "hihiii"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "8fb10af0",
+    "name": "kapaio 2025",
+    "organizer": {
+      "id": "000000004",
+      "username": "1",
+      "nickname": "hihi",
+      "full_name": "hihiii"
+    },
+    "participants": [],
+    "teams": []
+  }
+]
