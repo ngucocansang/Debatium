@@ -56,5 +56,14 @@
     "nickname": "1",
     "full_name": "1111111",
     "institution": "ooooo"
+  },
+  {
+    "id": "000000008",
+    "username": "2",
+    "password": "$2b$12$CDsTzDod4Zo6ZctzR8VIru0xFwr5z7QlBi7JIQdUt0xy9epohttdO",
+    "conflicts": [],
+    "nickname": "kokokoko",
+    "full_name": "kkkkkkkkk",
+    "institution": "xando"
   }
 ]

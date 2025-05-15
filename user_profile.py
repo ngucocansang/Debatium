@@ -74,7 +74,7 @@ def signin():
         print(f"🔑 Your User ID: {user['id']}")
         print(f"🏷️  Nickname: {user['nickname']}")
         print(f"🪪 Full name: {user['full_name']}")
-        print(f"🪪 Full name: {user['institution']}")
+        print(f"institution: {user['institution']}")
         print(f"⚔️  Conflicts: {user['conflicts']}")
         return user
 

@@ -44,11 +44,13 @@ def create_tournament(current_user):
             "id": current_user["id"],
             "username": current_user["username"],
             "nickname": current_user["nickname"],
-            "full_name": current_user["full_name"]
+            "full_name": current_user["full_name"],
+            "institution": current_user["institution"]
         },
         "participants": [],
         "teams": [],
     }
+
 
     tournaments.append(new_tournament)
     save_json(TOURNAMENT_DB, tournaments)
@@ -93,7 +95,7 @@ def list_tournaments():
     for i, tour in enumerate(tournaments, 1):
         organizer_username = tour.get('organizer', {}).get('username', 'N/A')
         organizer_insti = tour.get('organizer', {}).get('institution', 'N/A')
-        print(f"{i}. {tour['name']} (ID: {tour['id']}) - 6Organizer: {organizer_username} - {organizer_insti}")
+        print(f"{i}. {tour['name']} (ID: {tour['id']}) - Organizer: {organizer_username} - {organizer_insti}")
     return tournaments
 
 
