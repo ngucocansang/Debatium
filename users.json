@@ -65,5 +65,14 @@
     "nickname": "kokokoko",
     "full_name": "kkkkkkkkk",
     "institution": "xando"
+  },
+  {
+    "id": "000000009",
+    "username": "kokoko",
+    "password": "$2b$12$oiaxFCUj4pWwCounorCjBe9AaqhUvJq0Xv2H5LESQtuaqyQOn/N9G",
+    "conflicts": [],
+    "nickname": "kokoko",
+    "full_name": "dinh hong ngoc",
+    "institution": "fuv"
   }
 ]
