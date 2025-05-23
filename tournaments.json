@@ -202,8 +202,31 @@
       "full_name": "kkkkkkkkk",
       "institution": "xando"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000013",
+        "username": "0",
+        "nickname": "2",
+        "full_name": "3",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "c24217a3"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "c24217a3",
+        "team_name": "huhu",
+        "members": [
+          {
+            "id": "000000013",
+            "username": "0",
+            "nickname": "2",
+            "full_name": "3"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "5fd00000",
@@ -214,6 +237,32 @@
       "nickname": "kokokoko",
       "full_name": "kkkkkkkkk",
       "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "16999fb0",
+    "name": "0",
+    "organizer": {
+      "id": "000000012",
+      "username": "q",
+      "nickname": "meo",
+      "full_name": "hehe",
+      "institution": "F"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "8b32e63f",
+    "name": "huhu",
+    "organizer": {
+      "id": "000000015",
+      "username": "hh",
+      "nickname": "hhh",
+      "full_name": "huhu",
+      "institution": "heh"
     },
     "participants": [],
     "teams": []

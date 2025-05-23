@@ -74,5 +74,77 @@
     "nickname": "kokoko",
     "full_name": "dinh hong ngoc",
     "institution": "fuv"
+  },
+  {
+    "id": "000000010",
+    "username": "eehehe",
+    "password": "$2b$12$IzFgDVCJupLvq.E5R8wV5.GNlP45gj86VUfjEaIIgkhOhD6t4twzy",
+    "conflicts": [],
+    "nickname": "q",
+    "full_name": "q",
+    "institution": "F"
+  },
+  {
+    "id": "000000011",
+    "username": "sfbr",
+    "password": "$2b$12$EWaSZ3AxaICooUfbqPxri.lMAOVOnetbW784kfXP7z1okwLdnM94.",
+    "conflicts": [],
+    "nickname": "ewgvw",
+    "full_name": "vewv",
+    "institution": "wrb"
+  },
+  {
+    "id": "000000012",
+    "username": "q",
+    "password": "$2b$12$57gZRpxDE9Y7LCXX258UDOtxXR.hrz0Sqx70IVhk1trUtOdrQw0mW",
+    "conflicts": [],
+    "nickname": "meo",
+    "full_name": "hehe",
+    "institution": "F"
+  },
+  {
+    "id": "000000013",
+    "username": "0",
+    "password": "$2b$12$PVeENJJ1VWK72/Fm7jjr1uMqmMafuKqwUuJNawT5AG7DVzmrLIkUG",
+    "conflicts": [],
+    "nickname": "2",
+    "full_name": "3",
+    "institution": "F"
+  },
+  {
+    "id": "000000014",
+    "username": "me",
+    "password": "$2b$12$VFNDt3W/apI7USFKokPdSubxS3OemPzhH7n.R2PvDrfBNQdxzzjkK",
+    "conflicts": [],
+    "nickname": "h",
+    "full_name": "h",
+    "institution": "huhu"
+  },
+  {
+    "id": "000000015",
+    "username": "hh",
+    "password": "$2b$12$vpew1cXlHVhVq8krCdxi8OSnRUggvx0zPM72VCbDbLh/rB/0qkWLC",
+    "conflicts": [],
+    "nickname": "hhh",
+    "full_name": "huhu",
+    "institution": "heh"
+  },
+  {
+    "id": "000000016",
+    "username": "hehe",
+    "password": "$2b$12$PH7iYn9TteUvc4.viWcIQ.YzrP3vNyD5BW82SoMZlLQ.ZjT5qEyFm",
+    "conflicts": [],
+    "nickname": "huhu",
+    "full_name": "huhu",
+    "institution": "huhu\\"
+  },
+  {
+    "id": "000000017",
+    "username": "hihi",
+    "password": "$2b$12$6KI73bSq.SjCbu/AqmhRqeR7JplQSeOfzfJB/C/E0qT721PJ7B6iK",
+    "conflicts": [],
+    "nickname": "hihi",
+    "full_name": "hihi",
+    "institution": "hihi"
   }
 ]

@@ -1,6 +1,7 @@
 import uuid
 import json
 import os
+from datetime import datetime 
 from utils import load_json, save_json
 TOURNAMENT_DB = "tournaments.json"
 
@@ -18,6 +19,13 @@ def save_tournaments(tournaments):
     with open(TOURNAMENT_DB, "w") as f:
         json.dump(tournaments, f, indent=2)
 
+#kiểm tra validate date
+def validate_date(date): 
+    try:
+        datetime.strptime(date, "%Y-%m-$d") #điền theo năm - tháng - ngày 
+        return True
+    except ValueError:
+        return False
 def create_tournament(current_user):
     tournaments = load_json(TOURNAMENT_DB) or []
 
@@ -26,6 +34,7 @@ def create_tournament(current_user):
         if not name:
             print("❌ Tournament name cannot be empty. Please enter again.")
             continue
+        
 
         # Kiểm tra tên đã tồn tại chưa (so sánh không phân biệt hoa thường)
         if any(tour["name"].lower() == name.lower() for tour in tournaments):
@@ -34,12 +43,38 @@ def create_tournament(current_user):
 
         break  # Nếu hợp lệ thì thoát vòng lặp
 
+    #add thời gian
+    while True:
+        #add ngày bắt đầu
+        start_date = input("Enter the start date of the tournament: ").strip()
+        if validate_date(start_date):
+            continue 
+        #ngày kết thúc - dự kiến
+        end_date = input("Enter the end date (Expected) of the tournament: ").strip()
+        if not validate_date(end_date):
+            print("❌ Invalid end date format. Please use YYYY-MM-DD.")
+            continue
+
+        #nếu end < start thì kh valid
+        if end_date < start_date:
+            print("End date cannot be earlier than start date")
+            continue
+        if any(tour["start_date"].lower() == start_date.lower() for tour in tournaments):
+            print("The date already been booked")
+            continue
+        if any(tour["end_date"].lower() == end_date.lower() for tour in tournaments):
+            print("The date already been booked")
+            continue
+        break
+        
     import uuid
     tournament_id = str(uuid.uuid4())[:8]
 
     new_tournament = {
         "id": tournament_id,
         "name": name,
+        "start_date":start_date, #add zô new tournament
+        "end_date": end_date,
         "organizer": {
             "id": current_user["id"],
             "username": current_user["username"],
@@ -72,6 +107,7 @@ def add_participant():
     save_tournaments(tournaments)
     print(f"✅ Participant {participant_id} added to tournament {tid}.")
 
+
 def add_post_conflict():
     tournaments = load_tournaments()
     tid = input("Enter tournament ID: ").strip()
@@ -95,7 +131,9 @@ def list_tournaments():
     for i, tour in enumerate(tournaments, 1):
         organizer_username = tour.get('organizer', {}).get('username', 'N/A')
         organizer_insti = tour.get('organizer', {}).get('institution', 'N/A')
-        print(f"{i}. {tour['name']} (ID: {tour['id']}) - Organizer: {organizer_username} - {organizer_insti}")
+        start_date = tour.get('start_date', 'N/A')
+        end_date = tour.get('end_date','N/A')
+        print(f"{i}. {tour['name']} (ID: {tour['id']}) - Organizer: {organizer_username} - {organizer_insti} - Date: {start_date} to {end_date}")
     return tournaments
 
 
@@ -108,15 +146,8 @@ def join_tournament(user):
     if not choice.isdigit() or int(choice) < 1 or int(choice) > len(tournaments):
         print("❌ Invalid choice.")
         return
-
+    
     tournament = tournaments[int(choice) - 1]
-
-    # Check if already joined
-    for p in tournament["participants"]:
-        if p["id"] == user["id"]:
-            print("⚠️ You already joined this tournament.")
-            return
-
     # Chọn private level
     print("\nChoose private level:")
     print("1. Public")
@@ -238,6 +269,24 @@ def join_tournament(user):
         })
 
         print(f"✅ Joined tournament as {role}.")
+    
+      # Check if already joined
+    for p in tournament["participants"]:
+        if p["id"] == user["id"]:
+            print("⚠️ You already joined this tournament.")
 
+    
+    #get participants 
+    check_part = input("Do you want to display the participant ? Press 0 for Yes and 1 for No: ").strip()
+    if check_part == "0":
+        participant = tournament.get("participants", [])
+        if not participant:
+            print("Invalid")
+        else:
+            print(f"Participant in '{tournament}' ID: {tournament['id']}:\n") 
+            for p in participant:
+                print(f"{p['full_name']} {p['role']} - {p['team_id']}")
+            return
+            
     # Lưu thay đổi
     save_json(TOURNAMENT_DB, tournaments)

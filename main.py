@@ -1,5 +1,6 @@
 from user_profile import signup, signin
 from tournament_main import tournament_dashboard
+from display import display_participants
 
 def main():
     print("==== Debatium Login System ====")
@@ -14,9 +15,12 @@ def main():
         if user:
             print("\n1. Tournament dashboard")
             print("2. Let's Spar (Coming soon)")
+            print("\n3. Participants")
             dash = input("Choose option: ").strip()
             if dash == "1":
                 tournament_dashboard(user)
+            elif dash == "3":
+                display_participants()
             else:
                 print("👷 Feature coming soon.")
         else:
