@@ -24,6 +24,13 @@ def display_participants():
         return
 
     print(f"\n Participants in '{tournament['name']}' (ID: {tournament['id']}):\n")
-    for i, p in enumerate(participants, 1):
-        team_info = f" - Team ID: {p['team_id']}" if p.get("team_id") else ""
-        print(f"{i}. {p['full_name']} ({p['role'].capitalize()}){team_info}")
+    for i,p in enumerate(participants, 1):
+                team_name = ""
+                if p.get("role") == "debater":
+                    team_id = p.get("team_id")
+                    team = next((t for t in tournament.get("teams", []) if t["team_id"] == team_id), None)
+                    if team:
+                        team_info = f"- Team: {team['team_name']} (ID: {team['team_id']})"
+                    else:
+                        team_info = f"- Team ID: {team_id} (Not Found)"
+                print(f"{i}. {p['full_name']} ({p['role']})  {team_info}")

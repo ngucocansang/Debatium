@@ -146,5 +146,41 @@
     "nickname": "hihi",
     "full_name": "hihi",
     "institution": "hihi"
+  },
+  {
+    "id": "000000018",
+    "username": "lead",
+    "password": "$2b$12$dLtlewI65qd9IcKVx1mlhuCeseEtVMIuyrbqqMCegWnxNisIlrzIq",
+    "conflicts": [],
+    "nickname": "123",
+    "full_name": "123",
+    "institution": "123"
+  },
+  {
+    "id": "000000019",
+    "username": "miumiu",
+    "password": "$2b$12$Z.RMleawp.yusYnbrIhCM.bVl.thEttgRX8NDIkFaLOoD6LSmQSrO",
+    "conflicts": [],
+    "nickname": "hehe",
+    "full_name": "hehe",
+    "institution": "hehe"
+  },
+  {
+    "id": "000000020",
+    "username": "abcd",
+    "password": "$2b$12$nY6e67E9fYhJZv3YjB.dxePk7L04z9B7QbkAWR6o/145oJEkBkmtu",
+    "conflicts": [],
+    "nickname": "abcd",
+    "full_name": "abcd",
+    "institution": "abcd"
+  },
+  {
+    "id": "000000021",
+    "username": "itewon",
+    "password": "$2b$12$MsCLw45b3fNsX.m63K8Z0.F7yuIVJ/mJeQh9SdIC8eIT6KUk9WdI6",
+    "conflicts": [],
+    "nickname": "class",
+    "full_name": "class",
+    "institution": "class"
   }
 ]
