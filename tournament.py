@@ -3,6 +3,7 @@ import json
 import os
 from datetime import datetime 
 from utils import load_json, save_json
+from display import display_participants
 TOURNAMENT_DB = "tournaments.json"
 
 def load_tournaments():
@@ -152,11 +153,14 @@ def join_tournament(user):
     print("\nChoose private level:")
     print("1. Public")
     print("2. Private")
+    print("3.Show participant")
     level_choice = input("Your choice (1-2): ").strip()
     if level_choice == "1":
         private_level = "public"
     elif level_choice == "2":
         private_level = "private"
+    elif level_choice == "3":
+        display_participants()
     else:
         print("❌ Invalid choice for private level.")
         return
@@ -269,24 +273,8 @@ def join_tournament(user):
         })
 
         print(f"✅ Joined tournament as {role}.")
-    
-      # Check if already joined
-    for p in tournament["participants"]:
-        if p["id"] == user["id"]:
-            print("⚠️ You already joined this tournament.")
-
-    
-    #get participants 
-    check_part = input("Do you want to display the participant ? Press 0 for Yes and 1 for No: ").strip()
-    if check_part == "0":
-        participant = tournament.get("participants", [])
-        if not participant:
-            print("Invalid")
-        else:
-            print(f"Participant in '{tournament}' ID: {tournament['id']}:\n") 
-            for p in participant:
-                print(f"{p['full_name']} {p['role']} - {p['team_id']}")
-            return
-            
+   
     # Lưu thay đổi
     save_json(TOURNAMENT_DB, tournaments)
+
+    
