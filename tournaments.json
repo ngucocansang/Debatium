@@ -411,5 +411,21 @@
     },
     "participants": [],
     "teams": []
+  },
+  {
+    "id": "c621f855",
+    "name": "\u00f4ppopoop",
+    "rules": "BP",
+    "team_capacity": 16,
+    "language": "Vietnamese",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
   }
 ]
