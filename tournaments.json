@@ -19,7 +19,9 @@
     "participants": [
       "kookoo"
     ],
-    "conflicts": []
+    "conflicts": [
+      "ex"
+    ]
   },
   {
     "id": "8d943f3b",
@@ -208,6 +210,127 @@
   {
     "id": "5fd00000",
     "name": "oooo",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "80e37343",
+    "name": "ooo",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "88cee6e4",
+    "name": "ppp",
+    "rules": "BP",
+    "team_capacity": 16,
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "33cc4303",
+    "name": "oo",
+    "rules": "WSDC",
+    "team_capacity": 2,
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "0abf2679",
+    "name": "pp",
+    "rules": "AP",
+    "team_capacity": 2,
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "1ce8579a",
+    "name": "11",
+    "rules": "WSDC",
+    "team_capacity": 2,
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "f3e18bbf",
+    "name": "1",
+    "rules": "AP",
+    "team capacity": 20,
+    "language": "English",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "e7f477cc",
+    "name": "nsdc",
+    "rules": "WSDC",
+    "team capacity": 32,
+    "language": "Vietnamese",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "f808a9e2",
+    "name": "ioioioioio",
+    "rules": "WSDC",
+    "team_capacity": 32,
+    "language": "Vietnamese",
     "organizer": {
       "id": "000000008",
       "username": "2",
