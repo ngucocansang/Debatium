@@ -46,6 +46,15 @@
         "role": "debater",
         "private_level": "private",
         "team_id": "40b9e5e7"
+      },
+      {
+        "id": "000000019",
+        "username": "miumiu",
+        "nickname": "hehe",
+        "full_name": "hehe",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "613cca54"
       }
     ],
     "teams": [
@@ -60,6 +69,18 @@
             "full_name": "hihiii"
           }
         ]
+      },
+      {
+        "team_id": "613cca54",
+        "team_name": "huhu",
+        "members": [
+          {
+            "id": "000000019",
+            "username": "miumiu",
+            "nickname": "hehe",
+            "full_name": "hehe"
+          }
+        ]
       }
     ]
   },
@@ -72,8 +93,31 @@
       "nickname": "hihi",
       "full_name": "hihiii"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "d09c2923"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "d09c2923",
+        "team_name": "hehe",
+        "members": [
+          {
+            "id": "000000016",
+            "username": "hehe",
+            "nickname": "huhu",
+            "full_name": "huhu"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "8fb10af0",
@@ -117,8 +161,31 @@
       "nickname": "kokokoko",
       "full_name": "kkkkkkkkk"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "3e2c077e"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "3e2c077e",
+        "team_name": "abcd",
+        "members": [
+          {
+            "id": "000000016",
+            "username": "hehe",
+            "nickname": "huhu",
+            "full_name": "huhu"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "cac16c1e",
@@ -176,8 +243,31 @@
       "full_name": "kkkkkkkkk",
       "institution": "xando"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "7d5cf33b"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "7d5cf33b",
+        "team_name": "huhu",
+        "members": [
+          {
+            "id": "000000016",
+            "username": "hehe",
+            "nickname": "huhu",
+            "full_name": "huhu"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "8bd033d0",
@@ -202,8 +292,55 @@
       "full_name": "kkkkkkkkk",
       "institution": "xando"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000013",
+        "username": "0",
+        "nickname": "2",
+        "full_name": "3",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "c24217a3"
+      },
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "judge",
+        "private_level": "public"
+      },
+      {
+        "id": "000000020",
+        "username": "abcd",
+        "nickname": "abcd",
+        "full_name": "abcd",
+        "role": "judge",
+        "private_level": "public"
+      },
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "judge",
+        "private_level": "public"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "c24217a3",
+        "team_name": "huhu",
+        "members": [
+          {
+            "id": "000000013",
+            "username": "0",
+            "nickname": "2",
+            "full_name": "3"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "5fd00000",
@@ -214,6 +351,175 @@
       "nickname": "kokokoko",
       "full_name": "kkkkkkkkk",
       "institution": "xando"
+    },
+    "participants": [
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "7af045ca"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "7af045ca",
+        "team_name": "hehe",
+        "members": [
+          {
+            "id": "000000016",
+            "username": "hehe",
+            "nickname": "huhu",
+            "full_name": "huhu"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "16999fb0",
+    "name": "0",
+    "organizer": {
+      "id": "000000012",
+      "username": "q",
+      "nickname": "meo",
+      "full_name": "hehe",
+      "institution": "F"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "8b32e63f",
+    "name": "huhu",
+    "organizer": {
+      "id": "000000015",
+      "username": "hh",
+      "nickname": "hhh",
+      "full_name": "huhu",
+      "institution": "heh"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "a9d9a1e3",
+    "name": "heeh",
+    "start_date": "2025-05-20",
+    "end_date": "2025-06-25",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "678df67f",
+    "name": "hehe",
+    "start_date": "2025-10-20",
+    "end_date": "2025-10-30",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "c385e557",
+    "name": "meomeo",
+    "start_date": "2025-05-10",
+    "end_date": "2025-05-15",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "d5758798",
+    "name": "miumiu",
+    "start_date": "2025-05-19",
+    "end_date": "2025-05-30",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "d06d184c",
+    "name": "12345",
+    "start_date": "2025-05-10",
+    "end_date": "2025-05-20",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "8d08f1b6",
+    "name": "itewon",
+    "start_date": "2025-05-30",
+    "end_date": "2025-06-10",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "28a9a46b",
+    "name": "class",
+    "start_date": "2025-04-05",
+    "end_date": "2025-04-10",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "fd56d2ff",
+    "name": "abcd",
+    "start_date": "2024-05-10",
+    "end_date": "2024-05-15",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
     },
     "participants": [],
     "teams": []

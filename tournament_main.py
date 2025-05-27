@@ -31,6 +31,8 @@ def tournament_dashboard(current_user):
             add_post_conflict()
         elif choice == "0":
             print("👋 Exiting dashboard.")
-            break
+            break        
         else:
             print("❌ Invalid option.")
+
+
