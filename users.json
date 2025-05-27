@@ -74,5 +74,23 @@
     "nickname": "kokoko",
     "full_name": "dinh hong ngoc",
     "institution": "fuv"
+  },
+  {
+    "id": "000000010",
+    "username": "3",
+    "password": "$2b$12$TsY4Va3tunoc1vp8SIbXMeahiOG9SKUjTt/2fJWEaJbszYtRrhlrm",
+    "conflicts": [],
+    "nickname": "3",
+    "full_name": "3",
+    "institution": "3"
+  },
+  {
+    "id": "000000011",
+    "username": "4",
+    "password": "$2b$12$NSAu0uYNwbt3KqJ8mdMciuGB57/fheuJ7dZKbQP/KSntIIGAAMhvW",
+    "conflicts": [],
+    "nickname": "4",
+    "full_name": "4",
+    "institution": "4"
   }
 ]

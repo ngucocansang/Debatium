@@ -188,8 +188,9 @@ def join_tournament(user):
         return
 
     tournament = tournaments[int(choice) - 1]
-    rules = tournament.get("rules", "WSDC")  # Get the tournament's rules format
-    team_capacity = tournament.get("team_capacity", 16)  # Get the tournament's team capacity
+    rules = tournament.get("rules", "WSDC")
+    team_capacity = tournament.get("team_capacity", 16)
+    tournament_id = tournament["id"]
 
     # Check if already joined
     for p in tournament["participants"]:
@@ -197,20 +198,7 @@ def join_tournament(user):
             print("⚠️ You already joined this tournament.")
             return
 
-    # # Chọn private level
-    # print("\nChoose private level:")
-    # print("1. Public")
-    # print("2. Private")
-    # level_choice = input("Your choice (1-2): ").strip()
-    # if level_choice == "1":
-    #     private_level = "public"
-    # elif level_choice == "2":
-    #     private_level = "private"
-    # else:
-    #     print("❌ Invalid choice for private level.")
-    #     return
-
-    # Chọn role
+    # Choose role
     print("\nChoose role:")
     print("1. Debater")
     print("2. Judge")
@@ -226,116 +214,145 @@ def join_tournament(user):
         print("❌ Invalid choice for role.")
         return
 
+    # Generate participant ID based on role and tournament
+    def generate_participant_id(role, tournament_id):
+        prefix = "D" if role == "debater" else "J" if role == "judge" else "O"
+        existing_ids = [p["id"] for p in tournament.get("participants", []) if p["id"].startswith(prefix)]
+        next_num = len(existing_ids) + 1
+        return f"{prefix}{tournament_id[:3].upper()}{next_num:03d}"
+
+    participant_id = generate_participant_id(role, tournament_id)
+
     team_id = None
-    status = "confirmed" #default status
+    status = "confirmed"
+    
     if role == "debater":
-        # Quản lý team: tạo team mới hoặc join team có sẵn
         print("\nDebater role selected.")
         print("1. Create a new team")
         print("2. Join an existing team")
         team_choice = input("Choose (1 or 2): ").strip()
 
         if team_choice == "1":
-            #check if tournament has reached team capacity
             current_teams = len(tournament.get("teams", []))
             if current_teams >= team_capacity:
                 print("⚠️ Tournament has reached maximum team capacity. Your team will be placed on reserve.")
                 status = "reserved"
 
-            # Tạo team mới, team id tự tạo uuid
-            # import uuid
-            team_id = str(uuid.uuid4())[:8]  # lấy 8 ký tự đầu
+            team_id = str(uuid.uuid4())[:8]
             team_name = input("Enter team name: ").strip()
 
-            # Tạo team object và thêm vào tournament (nếu chưa có trường teams thì tạo)
             if "teams" not in tournament:
                 tournament["teams"] = []
 
-            # Thêm team mới
-            tournament["teams"].append({
+            new_team = {
                 "team_id": team_id,
                 "team_name": team_name,
                 "members": [{
-                    "id": user["id"],
+                    "id": participant_id,
+                    "user_id": user["id"],
                     "username": user["username"],
                     "nickname": user["nickname"],
                     "full_name": user["full_name"],
+                    "institution": user["institution"],
                     "status": status
                 }],
                 "status": status
+            }
+            tournament["teams"].append(new_team)
+
+            tournament["participants"].append({
+                "id": participant_id,
+                "user_id": user["id"],
+                "username": user["username"],
+                "nickname": user["nickname"],
+                "full_name": user["full_name"],
+                "institution": user["institution"],
+                "role": role,
+                "team_id": team_id,
+                "status": status
             })
 
-            print(f"✅ Created team '{team_name}' with id {team_id} and joined as a member.")
+            save_json(TOURNAMENT_DB, tournaments)
+            
+            print(f"\n✅ Created team '{team_name}' (ID: {team_id})")
+            print(f"Your participant ID: {participant_id}")
+            print(f"Current teams: {len(tournament['teams'])}/{team_capacity}")
             if status == "reserved":
-                print("ℹ️ Your team is on reserve list and will be automatically promoted if a spot becomes available.")
-        
+                print("ℹ️ Your team is on reserve list")
+
         elif team_choice == "2":
-            if "teams" not in tournament or len(tournament["teams"]) == 0:
+            if not tournament.get("teams"):
                 print("⚠️ No teams available to join. Please create a new team.")
                 return
 
-            # Hiển thị danh sách team có trong tournament
             print("\nAvailable teams:")
-            for t in tournament["teams"]:
-                print(f"- {t['team_name']} (ID: {t['team_id']}) [Members: {len(t['members'])}/{get_max_members(rules)}] [Status: {t.get('status', 'confirmed')}]")
-            join_team_id = input("Enter the Team ID you want to join: ").strip()
+            for i, t in enumerate(tournament["teams"], 1):
+                print(f"{i}. {t['team_name']} (ID: {t['team_id']})")
+                print(f"   Members: {len(t['members'])}/{get_max_members(rules)}")
+                print(f"   Status: {t.get('status', 'confirmed')}\n")
 
-            # Tìm team theo id
+            join_team_id = input("Enter the Team ID you want to join: ").strip()
             team = next((t for t in tournament["teams"] if t["team_id"] == join_team_id), None)
+            
             if not team:
                 print("❌ Team ID not found.")
                 return
 
-            # Kiểm tra user đã có trong team chưa
-            if any(m["id"] == user["id"] for m in team["members"]):
+            if any(m["user_id"] == user["id"] for m in team["members"]):
                 print("⚠️ You are already a member of this team.")
                 return
 
-            # Kiểm tra số lượng thành viên trong team
             max_members = get_max_members(rules)
             if len(team["members"]) >= max_members:
-                print(f"❌ This team already has the maximum number of members ({max_members}) for {rules} format.")
+                print(f"❌ Team is full (max {max_members} members for {rules} format)")
+                return
 
-            # Thêm user vào team
             team["members"].append({
-                "id": user["id"],
+                "id": participant_id,
+                "user_id": user["id"],
                 "username": user["username"],
                 "nickname": user["nickname"],
                 "full_name": user["full_name"],
+                "institution": user["institution"],
                 "status": team.get("status", "confirmed")
             })
 
-            print(f"✅ Joined team '{team['team_name']}' successfully.")
+            tournament["participants"].append({
+                "id": participant_id,
+                "user_id": user["id"],
+                "username": user["username"],
+                "nickname": user["nickname"],
+                "full_name": user["full_name"],
+                "institution": user["institution"],
+                "role": role,
+                "team_id": join_team_id,
+                "status": team.get("status", "confirmed")
+            })
+
+            save_json(TOURNAMENT_DB, tournaments)
+            
+            print(f"\n✅ Joined team '{team['team_name']}' successfully")
+            print(f"Your participant ID: {participant_id}")
+            print(f"Team now has {len(team['members'])} members")
 
         else:
-            print("❌ Invalid choice for team option.")
+            print("❌ Invalid choice")
             return
-
-        # Cuối cùng, thêm participant role debater kèm team id
-        tournament["participants"].append({
-            "id": user["id"],
-            "username": user["username"],
-            "nickname": user["nickname"],
-            "full_name": user["full_name"],
-            "role": role,
-            # "private_level": private_level,
-            "team_id": team_id if team_id else join_team_id,
-            "status": status
-        })
-
     else:
-        # Role judge hoặc observer không cần team
         tournament["participants"].append({
-            "id": user["id"],
+            "id": participant_id,
+            "user_id": user["id"],
             "username": user["username"],
             "nickname": user["nickname"],
             "full_name": user["full_name"],
+            "institution": user["institution"],
             "role": role,
             "status": "confirmed"
-            # "private_level": private_level
         })
 
-        print(f"✅ Joined tournament as {role}.")
+        save_json(TOURNAMENT_DB, tournaments)
+        print(f"\n✅ Joined tournament as {role}")
+        print(f"Your participant ID: {participant_id}")
 
 def get_max_members(rules):
     """Returns the maximum number of members allowed per team based on debate format"""

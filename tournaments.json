@@ -338,6 +338,77 @@
       "full_name": "kkkkkkkkk",
       "institution": "xando"
     },
+    "participants": [
+      {
+        "id": "DF80001",
+        "user_id": "000000008",
+        "username": "2",
+        "nickname": "kokokoko",
+        "full_name": "kkkkkkkkk",
+        "institution": "xando",
+        "role": "debater",
+        "team_id": "ac124db9",
+        "status": "confirmed"
+      },
+      {
+        "id": "JF80001",
+        "user_id": "000000010",
+        "username": "3",
+        "nickname": "3",
+        "full_name": "3",
+        "institution": "3",
+        "role": "judge",
+        "status": "confirmed"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "ac124db9",
+        "team_name": "oo",
+        "members": [
+          {
+            "id": "DF80001",
+            "user_id": "000000008",
+            "username": "2",
+            "nickname": "kokokoko",
+            "full_name": "kkkkkkkkk",
+            "institution": "xando",
+            "status": "confirmed"
+          }
+        ],
+        "status": "confirmed"
+      }
+    ]
+  },
+  {
+    "id": "61473563",
+    "name": "kokook",
+    "rules": "BP",
+    "team_capacity": 90,
+    "language": "Vietnamese",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "3921735b",
+    "name": "0",
+    "rules": "WSDC",
+    "team_capacity": 2,
+    "language": "English",
+    "organizer": {
+      "id": "000000010",
+      "username": "3",
+      "nickname": "3",
+      "full_name": "3",
+      "institution": "3"
+    },
     "participants": [],
     "teams": []
   }
