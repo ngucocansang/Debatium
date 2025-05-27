@@ -733,5 +733,50 @@
     },
     "participants": [],
     "teams": []
+  },
+  {
+    "id": "070539b8",
+    "name": "ioioiiooioioioi",
+    "rules": "BP",
+    "team_capacity": 12,
+    "language": "English",
+    "organizer": {
+      "id": "000000008",
+      "username": "2",
+      "nickname": "kokokoko",
+      "full_name": "kkkkkkkkk",
+      "institution": "xando"
+    },
+    "participants": [
+      {
+        "id": "D070001",
+        "user_id": "000000008",
+        "username": "2",
+        "nickname": "kokokoko",
+        "full_name": "kkkkkkkkk",
+        "institution": "xando",
+        "role": "debater",
+        "team_id": "4521ab78",
+        "status": "confirmed"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "4521ab78",
+        "team_name": "\u00f4pp",
+        "members": [
+          {
+            "id": "D070001",
+            "user_id": "000000008",
+            "username": "2",
+            "nickname": "kokokoko",
+            "full_name": "kkkkkkkkk",
+            "institution": "xando",
+            "status": "confirmed"
+          }
+        ],
+        "status": "confirmed"
+      }
+    ]
   }
 ]
