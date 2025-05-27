@@ -161,8 +161,31 @@
       "nickname": "kokokoko",
       "full_name": "kkkkkkkkk"
     },
-    "participants": [],
-    "teams": []
+    "participants": [
+      {
+        "id": "000000016",
+        "username": "hehe",
+        "nickname": "huhu",
+        "full_name": "huhu",
+        "role": "debater",
+        "private_level": "public",
+        "team_id": "3e2c077e"
+      }
+    ],
+    "teams": [
+      {
+        "team_id": "3e2c077e",
+        "team_name": "abcd",
+        "members": [
+          {
+            "id": "000000016",
+            "username": "hehe",
+            "nickname": "huhu",
+            "full_name": "huhu"
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "cac16c1e",
@@ -476,6 +499,21 @@
     "name": "class",
     "start_date": "2025-04-05",
     "end_date": "2025-04-10",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
+  },
+  {
+    "id": "fd56d2ff",
+    "name": "abcd",
+    "start_date": "2024-05-10",
+    "end_date": "2024-05-15",
     "organizer": {
       "id": "000000016",
       "username": "hehe",
