@@ -3,6 +3,15 @@ import json
 import os
 from utils import load_json, save_json
 TOURNAMENT_DB = "tournaments.json"
+from datetime import datetime
+#calendar 
+def validate_date(date):
+    try: 
+        datetime.strptime(date, "%Y-%m-%d")
+        return True
+    except ValueError:
+        return False
+    
 
 def load_tournaments():
     if not os.path.exists(TOURNAMENT_DB):
@@ -33,6 +42,24 @@ def create_tournament(current_user):
             continue
 
         break  # Nếu hợp lệ thì thoát vòng lặp
+
+    while True: 
+        start_date = input("Enter the start date of the tournament: ").strip()
+
+        if not validate_date(start_date):
+            print("Invalid start date format. Please use YYYY-MM-DD")
+            continue
+        end_date = input("Enter the end date(Expected) of the tournament: ").strip()
+        if not validate_date(end_date):
+            print("Invalid end date. Please use YYYY-MM-DD")
+            continue
+        if end_date < start_date:
+            print("End date cannot be earlier than start date")
+            continue
+        if any(tour.get("start_date") == start_date or tour.get("end_date") == end_date for tour in tournaments):
+            print("the date already booked")
+            continue
+        break
 
         # Input for debate format/rules
     print("\nSelect debate format/rules:")
@@ -84,14 +111,14 @@ def create_tournament(current_user):
             break
         else:
             print("❌ Invalid choice. Please enter a number between 1-2.")
-
-
     tournament_id = str(uuid.uuid4())[:8]
 
     new_tournament = {
         "id": tournament_id,
         "name": name,
         "rules": rules,
+        "start_date": start_date,
+        "end_date": end_date,
         "team_capacity": team_capacity,
         "language": language,
         "organizer": {
@@ -168,9 +195,11 @@ def list_tournaments():
         rules = tour.get('rules', 'Not specified')
         team_capacity = tour.get('team_capacity', 'Not specified')
         current_teams = len(tour.get('teams', []))
-        
+        tour_date = tour.get('start_date')
+        tour_end = tour.get('end_date')
         print(f"{i}. {tour_name} (ID: {tour_id})")
         print(f"   Language: {language} | Format: {rules}")
+        print(f"   Time of event: {tour_date} - {tour_end} ")
         print(f"   Teams: {current_teams}/{team_capacity} | Organizer: {organizer_username} ({organizer_insti})")
         print("-" * 50)  # Separator between tournaments
     
@@ -427,3 +456,5 @@ def leave_tournament(user):
     # Lưu thay đổi
     save_json(TOURNAMENT_DB, tournaments)
     print("✅ You have left the tournament successfully.")  # Add this line
+
+

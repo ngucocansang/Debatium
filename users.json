@@ -92,5 +92,14 @@
     "nickname": "4",
     "full_name": "4",
     "institution": "4"
+  },
+  {
+    "id": "000000012",
+    "username": "hehe",
+    "password": "$2b$12$TAmBlCTPDJ1Ek09c.uTRT.m0/njBnCDiME2PvE1Z5uDCYF0l/13YG",
+    "conflicts": [],
+    "nickname": "hehe",
+    "full_name": "hehe",
+    "institution": "hehe"
   }
 ]

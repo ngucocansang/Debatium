@@ -778,5 +778,23 @@
         "status": "confirmed"
       }
     ]
+  },
+  {
+    "id": "746fa960",
+    "name": "abc",
+    "rules": "BP",
+    "start_date": "2025-10-05",
+    "end_date": "2025-10-25",
+    "team_capacity": 4,
+    "language": "Vietnamese",
+    "organizer": {
+      "id": "000000012",
+      "username": "hehe",
+      "nickname": "hehe",
+      "full_name": "hehe",
+      "institution": "hehe"
+    },
+    "participants": [],
+    "teams": []
   }
 ]
