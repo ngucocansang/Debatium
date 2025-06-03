@@ -354,6 +354,18 @@ def join_tournament(user):
         print(f"\n✅ Joined tournament as {role}")
         print(f"Your participant ID: {participant_id}")
 
+# def update_user_with_joined_tournament(user_id, tournament_id):
+#     users = load_json(tournaments.json)
+#     for u in users:
+#         if u["id"] == user_id:
+#             if "joined_tournaments" not in u:
+#                 u["joined_tournaments"] = []
+#             if tournament_id not in u["joined_tournaments"]:
+#                 u["joined_tournaments"].append(tournament_id)
+#                 save_json(USER_DB, users)
+#             break
+
+
 def get_max_members(rules):
     """Returns the maximum number of members allowed per team based on debate format"""
     rules_member_limits = {
