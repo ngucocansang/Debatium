@@ -11,6 +11,10 @@ def validate_date(date):
         return True
     except ValueError:
         return False
+
+def to_date(date_str):
+    return datetime.strptime(date_str, "%Y-%m-%d")
+def dates_overlap(start1, end1, start2, ende)
     
 
 def load_tournaments():
@@ -378,10 +382,16 @@ def join_tournament(user):
             "role": role,
             "status": "confirmed"
         })
-
         save_json(TOURNAMENT_DB, tournaments)
         print(f"\n✅ Joined tournament as {role}")
         print(f"Your participant ID: {participant_id}")
+        
+        check_calendar = ["participants"]
+        if role in check_calendar:
+            
+   
+     
+
 
 def get_max_members(rules):
     """Returns the maximum number of members allowed per team based on debate format"""
