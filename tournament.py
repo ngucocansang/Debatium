@@ -386,13 +386,6 @@ def join_tournament(user):
         print(f"\n✅ Joined tournament as {role}")
         print(f"Your participant ID: {participant_id}")
         
-        check_calendar = ["participants"]
-        if role in check_calendar:
-            
-   
-     
-
-
 def get_max_members(rules):
     """Returns the maximum number of members allowed per team based on debate format"""
     rules_member_limits = {
