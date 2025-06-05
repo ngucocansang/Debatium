@@ -523,5 +523,20 @@
     },
     "participants": [],
     "teams": []
+  },
+  {
+    "id": "f8f1eb0c",
+    "name": "B",
+    "start_date": "2025-10-30",
+    "end_date": "2025-11-05",
+    "organizer": {
+      "id": "000000016",
+      "username": "hehe",
+      "nickname": "huhu",
+      "full_name": "huhu",
+      "institution": "huhu\\"
+    },
+    "participants": [],
+    "teams": []
   }
 ]
